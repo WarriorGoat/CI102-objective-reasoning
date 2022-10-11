@@ -1,6 +1,51 @@
 // ┌─────────────────┐
 // │ Your code here! │	
 // └─────────────────┘
+function isAdmin(user){
+    if (user.userRole === "ADMIN") {
+        return true;
+    } else { return false;}
+}
+
+
+function getEmail (user) {
+    let email = `${user.firstName.toLowerCase()}.${user.lastName.toLowerCase()}@codeimmersives.com`;
+    return email;
+}
+
+function getPlaylistLength(list){
+    let length = list.songs.length;
+    return length
+}
+
+function getHardestHomework(hmWrkAry){ 
+   let hard = "test"  
+    if (hmWrkAry.length ===0){
+        hard = "";
+    }
+    else {
+        let low = hmWrkAry[0].averageScore;
+        hard = hmWrkAry[0].name;
+        for(let i = 0; i<hmWrkAry.length; i++){
+            let score = hmWrkAry[i].averageScore;  
+        if (score < low){
+            hard = hmWrkAry[i].name;
+            }
+        }
+    } 
+return hard; 
+}
+
+function createPhonebook (names,numbers){
+    let book = {}
+    for(let i = 0; i<names.length; i++){
+    book[names[i]] = numbers[i];
+    }
+return book
+}
+
+
+
 
 
 
