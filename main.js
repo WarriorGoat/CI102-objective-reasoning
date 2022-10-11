@@ -19,19 +19,19 @@ function getPlaylistLength(list){
 }
 
 function getHardestHomework(hmWrkAry){ 
-   let hard = "test"  
-    if (hmWrkAry.length ===0){
+
+    let hard = "test";  //initial variable
+
+    if (hmWrkAry.length === 0){ // null case
         hard = "";
     }
     else {
         let low = hmWrkAry[0].averageScore;
         hard = hmWrkAry[0].name;
-        for(let i = 0; i<hmWrkAry.length; i++){
-            let score = hmWrkAry[i].averageScore;  
-        if (score < low){
+        for(let i = 0; i<hmWrkAry.length; i++)
+        if (hmWrkAry[i].averageScore < low){  //find name with lowest score
             hard = hmWrkAry[i].name;
             }
-        }
     } 
 return hard; 
 }
